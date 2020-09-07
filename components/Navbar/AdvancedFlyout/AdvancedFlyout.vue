@@ -4,13 +4,13 @@
     <button
       v-click-outside="externalClick"
       type="button"
-      class="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+      class="inline-flex items-center space-x-2 text-base font-medium leading-6 text-gray-500 transition duration-150 ease-in-out group hover:text-gray-900 focus:outline-none focus:text-gray-900"
       @click="toggle()"
     >
       <span>{{ label }}</span>
       <!-- Item active: "text-gray-600", Item inactive: "text-gray-400" -->
       <svg
-        class="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
+        class="w-5 h-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-gray-500 group-focus:text-gray-500"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -25,26 +25,26 @@
     <transition name="fade">
       <div
         v-show="isOpen"
-        class="absolute -ml-4 mt-3 transform w-screen max-w-md lg:max-w-3xl"
+        class="absolute w-screen max-w-md mt-3 -ml-4 transform lg:max-w-3xl"
       >
         <div class="rounded-lg shadow-lg">
-          <div class="rounded-lg shadow-xs overflow-hidden">
+          <div class="overflow-hidden rounded-lg shadow-xs">
             <div
-              class="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2"
+              class="relative z-20 grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 lg:grid-cols-2"
             >
               <nuxt-link
                 v-for="(subItem, index) in regularMenu"
                 :key="`subItem-${index}`"
                 :to="subItem.target"
-                class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150"
+                class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
               >
                 <div
                   v-if="subItem.icon"
-                  class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12"
+                  class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12"
                   v-html="subItem.icon"
                 ></div>
                 <div class="space-y-1">
-                  <p class="text-base leading-6 font-medium text-gray-900">
+                  <p class="text-base font-medium leading-6 text-gray-900">
                     {{ subItem.label }}
                   </p>
                   <p
@@ -61,10 +61,10 @@
                 v-for="(subItem, index) in wideMenu"
                 :key="`subItem-${index}`"
                 :to="subItem.target"
-                class="-m-3 p-3 flow-root space-y-1 rounded-md hover:bg-gray-100 transition ease-in-out duration-150"
+                class="flow-root p-3 -m-3 space-y-1 transition duration-150 ease-in-out rounded-md hover:bg-gray-100"
               >
                 <div class="flex items-center space-x-3">
-                  <div class="text-base leading-6 font-medium text-gray-900">
+                  <div class="text-base font-medium leading-6 text-gray-900">
                     {{ subItem.label }}
                   </div>
                   <span

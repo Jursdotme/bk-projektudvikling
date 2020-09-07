@@ -1,26 +1,26 @@
-<template
-  ><div>
+<template>
+  <div>
     <div class="relative bg-gray-800">
       <div
         class="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2"
       >
         <img
-          class="w-full h-full object-cover"
+          class="object-cover w-full h-full"
           src="https://images.unsplash.com/photo-1559225306-3f60aa7b39a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=720&q=60"
           alt="Support team"
         />
       </div>
       <div
-        class="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
+        class="relative max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8 lg:py-16"
       >
         <div class="md:ml-auto md:w-1/2 md:pl-10">
           <div
-            class="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300"
+            class="text-base font-semibold leading-6 tracking-wider text-gray-300 uppercase"
           >
             Award winning support
           </div>
           <h2
-            class="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10"
+            class="mt-2 text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10"
           >
             We’re here to help
           </h2>
@@ -34,11 +34,11 @@
             <div class="inline-flex rounded-md shadow">
               <a
                 href="#"
-                class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-gray-900 bg-white hover:text-gray-600 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-gray-900 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-600 focus:outline-none focus:shadow-outline"
               >
                 Visit the help center
                 <svg
-                  class="-mr-1 ml-3 h-5 w-5 text-gray-400"
+                  class="w-5 h-5 ml-3 -mr-1 text-gray-400"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -57,13 +57,13 @@
     </div>
 
     <div class="bg-white">
-      <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div
           class="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8"
         >
           <div>
             <h2
-              class="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9"
+              class="text-2xl font-extrabold leading-8 text-gray-900 sm:text-3xl sm:leading-9"
             >
               Sales Support
             </h2>
@@ -77,7 +77,7 @@
               <div class="flex">
                 <div class="flex-shrink-0">
                   <svg
-                    class="h-6 w-6 text-gray-400"
+                    class="w-6 h-6 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -91,18 +91,14 @@
                   </svg>
                 </div>
                 <div class="ml-3 text-base leading-6 text-gray-500">
-                  <p>
-                    +1 (555) 123 4567
-                  </p>
-                  <p class="mt-1">
-                    Mon-Fri 8am to 6pm PST
-                  </p>
+                  <p>+1 (555) 123 4567</p>
+                  <p class="mt-1">Mon-Fri 8am to 6pm PST</p>
                 </div>
               </div>
-              <div class="mt-6 flex">
+              <div class="flex mt-6">
                 <div class="flex-shrink-0">
                   <svg
-                    class="h-6 w-6 text-gray-400"
+                    class="w-6 h-6 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -116,16 +112,14 @@
                   </svg>
                 </div>
                 <div class="ml-3 text-base leading-6 text-gray-500">
-                  <p>
-                    support@example.com
-                  </p>
+                  <p>support@example.com</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="mt-12 sm:mt-16 md:mt-0">
             <h2
-              class="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9"
+              class="text-2xl font-extrabold leading-8 text-gray-900 sm:text-3xl sm:leading-9"
             >
               Technical Support
             </h2>
@@ -140,7 +134,7 @@
               <div class="flex">
                 <div class="flex-shrink-0">
                   <svg
-                    class="h-6 w-6 text-gray-400"
+                    class="w-6 h-6 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -154,18 +148,14 @@
                   </svg>
                 </div>
                 <div class="ml-3 text-base leading-6 text-gray-500">
-                  <p>
-                    +1 (555) 123 4567
-                  </p>
-                  <p class="mt-1">
-                    Mon-Fri 8am to 6pm PST
-                  </p>
+                  <p>+1 (555) 123 4567</p>
+                  <p class="mt-1">Mon-Fri 8am to 6pm PST</p>
                 </div>
               </div>
-              <div class="mt-6 flex">
+              <div class="flex mt-6">
                 <div class="flex-shrink-0">
                   <svg
-                    class="h-6 w-6 text-gray-400"
+                    class="w-6 h-6 text-gray-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -179,9 +169,7 @@
                   </svg>
                 </div>
                 <div class="ml-3 text-base leading-6 text-gray-500">
-                  <p>
-                    support@example.com
-                  </p>
+                  <p>support@example.com</p>
                 </div>
               </div>
             </div>

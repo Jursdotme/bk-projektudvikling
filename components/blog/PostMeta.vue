@@ -1,22 +1,18 @@
 <template>
-  <div class="mt-6 flex items-center">
+  <div class="flex items-center mt-6">
     <div class="flex-shrink-0">
-      <img class="h-10 w-10 rounded-full" :src="authorData.portrait" alt="" />
+      <img class="w-10 h-10 rounded-full" :src="authorData.portrait" alt="" />
     </div>
     <div class="ml-3">
-      <p class="text-sm leading-5 font-medium text-gray-900">
+      <p class="text-sm font-medium leading-5 text-gray-900">
         {{ authorData.name }}
       </p>
       <div class="flex text-sm leading-5 text-gray-500">
         <time datetime="2020-03-16">
           {{ date | date }}
         </time>
-        <span class="mx-1">
-          &middot;
-        </span>
-        <span>
-          6 min read
-        </span>
+        <span class="mx-1"> &middot; </span>
+        <span> 6 min read </span>
       </div>
     </div>
   </div>

@@ -1,9 +1,9 @@
 <template>
   <nuxt-link
     :to="target"
-    class="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+    class="block p-3 -m-3 space-y-1 transition duration-150 ease-in-out rounded-md hover:bg-gray-50"
   >
-    <p class="text-base leading-6 font-medium text-gray-900">
+    <p class="text-base font-medium leading-6 text-gray-900">
       {{ label }}
     </p>
     <p class="text-sm leading-5 text-gray-500">

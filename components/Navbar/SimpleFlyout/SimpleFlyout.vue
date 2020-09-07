@@ -4,13 +4,13 @@
     <button
       v-click-outside="externalClick"
       type="button"
-      class="group text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+      class="inline-flex items-center space-x-2 text-base font-medium leading-6 text-gray-500 transition duration-150 ease-in-out group hover:text-gray-900 focus:outline-none focus:text-gray-900"
       @click="toggle()"
     >
       <span>{{ label }}</span>
       <!-- Item active: "text-gray-600", Item inactive: "text-gray-400" -->
       <svg
-        class="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
+        class="w-5 h-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-gray-500 group-focus:text-gray-500"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -25,20 +25,20 @@
     <transition name="fade">
       <div
         v-show="isOpen"
-        class="absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xs sm:px-0"
+        class="absolute w-screen max-w-xs px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0"
       >
         <div class="rounded-lg shadow-lg">
-          <div class="rounded-lg shadow-xs overflow-hidden">
+          <div class="overflow-hidden rounded-lg shadow-xs">
             <div
-              class="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
+              class="relative z-20 grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8"
             >
               <nuxt-link
                 v-for="(subItem, index) in subItems"
                 :key="`subItem-${index}`"
                 :to="subItem.target"
-                class="-m-3 p-3 block space-y-1 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+                class="block p-3 -m-3 space-y-1 transition duration-150 ease-in-out rounded-md hover:bg-gray-50"
               >
-                <p class="text-base leading-6 font-medium text-gray-900">
+                <p class="text-base font-medium leading-6 text-gray-900">
                   {{ subItem.label }}
                 </p>
                 <p

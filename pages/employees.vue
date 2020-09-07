@@ -1,52 +1,52 @@
 <template>
   <div class="bg-gray-50">
-    <div class="lg:text-center py-12">
+    <div class="py-12 lg:text-center">
       <h1
-        class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+        class="text-base font-semibold leading-6 tracking-wide text-indigo-600 uppercase"
       >
         Employees
       </h1>
       <p
-        class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
         Meet the Team
       </p>
-      <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
+      <p class="max-w-2xl mt-4 text-xl leading-7 text-gray-500 lg:mx-auto">
         Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
         voluptatum cupiditate veritatis in accusamus quisquam.
       </p>
     </div>
 
     <ul
-      class="max-w-7xl mx-auto sm:p-6 lg:p-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      class="grid grid-cols-1 gap-6 mx-auto max-w-7xl sm:p-6 lg:p-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
     >
       <li
         v-for="(employee, index) in loadedEmployees"
         :key="index"
-        class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow"
+        class="flex flex-col col-span-1 text-center bg-white rounded-lg shadow"
       >
-        <div class="flex-1 flex flex-col p-8">
+        <div class="flex flex-col flex-1 p-8">
           <img
-            class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full"
+            class="flex-shrink-0 w-32 h-32 mx-auto bg-black rounded-full"
             :src="employee.portrait"
             alt=""
           />
-          <h3 class="mt-6 text-gray-900 text-sm leading-5 font-medium">
+          <h3 class="mt-6 text-sm font-medium leading-5 text-gray-900">
             {{ employee.title }}
           </h3>
-          <dl class="mt-1 flex-grow flex flex-col justify-between">
+          <dl class="flex flex-col justify-between flex-grow mt-1">
             <dt class="sr-only">Title</dt>
-            <dd class="text-gray-500 text-sm leading-5">
+            <dd class="text-sm leading-5 text-gray-500">
               {{ employee.employeetitle }}
             </dd>
           </dl>
         </div>
         <div class="border-t border-gray-200">
-          <div class="-mt-px flex">
-            <div class="w-0 flex-1 flex border-r border-gray-200">
+          <div class="flex -mt-px">
+            <div class="flex flex-1 w-0 border-r border-gray-200">
               <a
                 :href="mailToLink(employee)"
-                class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm leading-5 text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 transition ease-in-out duration-150"
+                class="relative inline-flex items-center justify-center flex-1 w-0 py-4 -mr-px text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-transparent rounded-bl-lg hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
               >
                 <svg
                   class="w-5 h-5 text-gray-400"
@@ -63,10 +63,10 @@
                 <span class="ml-3">Email</span>
               </a>
             </div>
-            <div class="-ml-px w-0 flex-1 flex">
+            <div class="flex flex-1 w-0 -ml-px">
               <a
                 :href="telLink(employee)"
-                class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm leading-5 text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 transition ease-in-out duration-150"
+                class="relative inline-flex items-center justify-center flex-1 w-0 py-4 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-transparent rounded-br-lg hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
               >
                 <svg
                   class="w-5 h-5 text-gray-400"
