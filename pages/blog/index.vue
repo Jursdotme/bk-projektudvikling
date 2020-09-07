@@ -39,9 +39,7 @@
                 <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
                   {{ post.title }}
                 </h3>
-                <p class="mt-3 text-base leading-6 text-gray-500">
-                  {{ post.description }}
-                </p>
+                <p class="mt-3 text-base leading-6 text-gray-500">excerpt</p>
               </nuxt-link>
             </div>
           </div>

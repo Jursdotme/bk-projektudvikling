@@ -1,11 +1,9 @@
 <template>
   <div>
     <article
-      class="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-sm sm:prose lg:prose-lg xl:prose-2xl"
+      class="px-4 mx-auto mt-12 prose-sm prose max-w-7xl sm:px-6 lg:px-8 sm:prose lg:prose-lg xl:prose-2xl"
     >
       <h1>{{ post.title }}</h1>
-
-      <PostMeta :author-data="post.author" :date="post.date" />
 
       <img :src="post.thumbnail" alt="" />
 

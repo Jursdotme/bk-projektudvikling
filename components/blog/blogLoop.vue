@@ -36,18 +36,10 @@
           </nuxt-link>
           <div class="flex flex-col justify-between flex-1 p-6 bg-white">
             <div class="flex-1">
-              <p class="text-sm font-medium leading-5 text-indigo-600">
-                <nuxt-link :to="postLink(post)" class="hover:underline">{{
-                  post.category
-                }}</nuxt-link>
-              </p>
               <nuxt-link :to="postLink(post)" class="block">
                 <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
                   {{ post.title }}
                 </h3>
-                <p class="mt-3 text-base leading-6 text-gray-500">
-                  {{ post.description }}
-                </p>
               </nuxt-link>
             </div>
           </div>

@@ -64,15 +64,6 @@ export default {
 
   markdownit: {
     injected: true,
-    linkify: true,
-    html: true,
-    use: [
-      [
-        'markdown-it-anchor',
-        { permalink: true, permalinkBefore: false, permalinkSymbol: '§' },
-      ],
-      'markdown-it-toc-done-right',
-    ],
   },
   /*
    ** Axios module configuration
