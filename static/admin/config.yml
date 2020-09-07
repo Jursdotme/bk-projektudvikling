@@ -16,7 +16,7 @@ collections:
       preview: false
     fields:
       - { label: 'Titel',name: 'title',widget: 'string'}
-      - { label: "Feremhævet billede",name: "thumbnail",widget: "image",required: false}
+      - { label: "Fremhævet billede",name: "thumbnail",widget: "image",required: false}
       - { label: 'Dato',name: 'date',widget: 'datetime'}
       - { label: 'Indhold',name: 'body',widget: 'markdown'} 
 

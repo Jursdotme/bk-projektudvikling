@@ -7,7 +7,7 @@
         <a href="/" class="flex">
           <img
             class="w-auto h-8 sm:h-10"
-            src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
+            src="/images/logo.svg"
             alt="Workflow"
           />
         </a>
