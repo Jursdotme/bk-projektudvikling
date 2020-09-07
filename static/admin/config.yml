@@ -15,42 +15,25 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title',name: 'title',widget: 'string'}
-      - { label: "Featured Image",name: "thumbnail",widget: "image",required: false}
-      - { label: 'Publish Date',name: 'date',widget: 'datetime'}
-      - { label: "Post Author", name: "author", widget: "relation", collection: "settings", searchFields: ["authors.*.name"], valueField: "authors.*.name",required: false}
-      - { label: "Category", name: "category", widget: "relation", collection: "blogcategories", searchFields: ["title"], valueField: "title", required: false}
-      - { label: 'Description',name: 'description',widget: 'string'}
-      - { label: 'Body',name: 'body',widget: 'markdown'} 
+      - { label: 'Titel',name: 'title',widget: 'string'}
+      - { label: "Feremhævet billede",name: "thumbnail",widget: "image",required: false}
+      - { label: 'Dato',name: 'date',widget: 'datetime'}
+      - { label: 'Indhold',name: 'body',widget: 'markdown'} 
 
-  # - name: 'page'
-  #   label: 'Pages'
-  #   format: 'json'
-  #   folder: 'assets/content/pages'
-  #   create: true
-  #   slug: '{{slug}}'
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - { label: 'Title',name: 'title',widget: 'string'}
-  #     - { label: 'Publish Date',name: 'date',widget: 'datetime'}
-  #     - { label: 'Body',name: 'body',widget: 'markdown'} 
-
-  - name: 'employees'
-    label: 'Employees'
+  - name: 'salesitems'
+    label: 'Salgs emner'
     format: 'json'
-    folder: 'assets/content/employees'
+    folder: 'assets/content/salesitems'
     create: true
     slug: '{{name}}'
     editor:
       preview: false
     fields:
       - { label: 'Name',name: 'title',widget: 'string'}
-      - { label: 'Title',name: 'employeetitle',widget: 'string'}
-      - { label: 'Biography',name: 'biography',widget: 'text'}
-      - { label: 'Portrait',name: 'portrait',widget: 'image', required: false}
-      - { label: 'Email',name: 'email',widget: 'string'}
-      - { label: 'Phone',name: 'phone',widget: 'string'}
+      - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
+      - { label: 'Specifikationer',name: 'specs',widget: 'markdown'}
+      - { label: "Feremhævet billede",name: "thumbnail",widget: "image",required: false, allow_multiple: true}
+
   
   - name: 'settings'
     label: 'Settings'

@@ -21,23 +21,23 @@
       class="grid grid-cols-1 gap-6 mx-auto max-w-7xl sm:p-6 lg:p-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
     >
       <li
-        v-for="(employee, index) in loadedEmployees"
+        v-for="(salesItem, index) in loadedEmployees"
         :key="index"
         class="flex flex-col col-span-1 text-center bg-white rounded-lg shadow"
       >
         <div class="flex flex-col flex-1 p-8">
           <img
             class="flex-shrink-0 w-32 h-32 mx-auto bg-black rounded-full"
-            :src="employee.portrait"
+            :src="salesItem.portrait"
             alt=""
           />
           <h3 class="mt-6 text-sm font-medium leading-5 text-gray-900">
-            {{ employee.title }}
+            {{ salesItem.title }}
           </h3>
           <dl class="flex flex-col justify-between flex-grow mt-1">
             <dt class="sr-only">Title</dt>
             <dd class="text-sm leading-5 text-gray-500">
-              {{ employee.employeetitle }}
+              {{ salesItem.salesItemtitle }}
             </dd>
           </dl>
         </div>
@@ -45,7 +45,7 @@
           <div class="flex -mt-px">
             <div class="flex flex-1 w-0 border-r border-gray-200">
               <a
-                :href="mailToLink(employee)"
+                :href="mailToLink(salesItem)"
                 class="relative inline-flex items-center justify-center flex-1 w-0 py-4 -mr-px text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-transparent rounded-bl-lg hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
               >
                 <svg
@@ -65,7 +65,7 @@
             </div>
             <div class="flex flex-1 w-0 -ml-px">
               <a
-                :href="telLink(employee)"
+                :href="telLink(salesItem)"
                 class="relative inline-flex items-center justify-center flex-1 w-0 py-4 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-transparent rounded-br-lg hover:text-gray-500 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10"
               >
                 <svg
@@ -90,16 +90,16 @@
 <script>
 export default {
   computed: {
-    loadedEmployees() {
-      return this.$store.state.employees.slice(0, this.postCount)
+    loadedSalesItems() {
+      return this.$store.state.salesItems.slice(0, this.postCount)
     },
   },
   methods: {
-    mailToLink(employee) {
-      return 'mailto:' + employee.email
+    mailToLink(salesItem) {
+      return 'mailto:' + salesItem.email
     },
-    telLink(employee) {
-      return 'mailto:' + employee.phone
+    telLink(salesItem) {
+      return 'mailto:' + salesItem.phone
     },
   },
 }

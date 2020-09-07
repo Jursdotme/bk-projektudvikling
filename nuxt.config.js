@@ -85,14 +85,5 @@ export default {
    */
   build: {},
 
-  generate: {
-    routes() {
-      const fs = require('fs')
-      const path = require('path')
-      return fs.readdirSync('./assets/content/blog').map((file) => ({
-        route: `/blog/${path.parse(file).name}`, // Return the slug
-        payload: require(`./assets/content/blog/${file}`),
-      }))
-    },
-  },
+  generate: {},
 }
