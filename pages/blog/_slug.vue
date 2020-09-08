@@ -16,11 +16,9 @@
 export default {
   name: 'PostPage',
   async asyncData({ params, payload }) {
-    if (payload) return { post: payload }
-    else
-      return {
-        post: await require(`@/assets/content/blog/${params.slug}.json`),
-      }
+    return {
+      post: await require(`@/assets/content/blog/${params.slug}.json`),
+    }
   },
 }
 </script>
