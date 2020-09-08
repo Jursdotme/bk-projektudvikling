@@ -15,9 +15,15 @@
 <script>
 export default {
   name: 'PostPage',
-  async asyncData({ params, payload }) {
-    return {
-      post: await require(`@/assets/content/blog/${params.slug}.json`),
+
+  async asyncData({ params, error }) {
+    try {
+      return {
+        post: await require(`@/assets/content/blog/${params.slug}.json`),
+      }
+    } catch (err) {
+      // catches errors both in fetch and response.json
+      error({ statusCode: 404, message: 'Post not found' })
     }
   },
 }
