@@ -35,7 +35,7 @@
         </button>
       </div>
       <div
-        class="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12"
+        class="hidden md:flex-1 md:flex md:items-center md:justify-end md:space-x-12"
       >
         <nav class="flex space-x-10">
           <MenuItem
@@ -44,23 +44,6 @@
             v-bind="menuItem"
           />
         </nav>
-
-        <div class="flex items-center space-x-8">
-          <a
-            href="#"
-            class="text-base font-medium leading-6 text-gray-500 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
-          >
-            Sign in
-          </a>
-          <span class="inline-flex rounded-md shadow-sm">
-            <a
-              href="#"
-              class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700"
-            >
-              Sign up
-            </a>
-          </span>
-        </div>
       </div>
     </div>
 
