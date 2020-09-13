@@ -37,7 +37,7 @@
                   {{ item.title }}
                 </h3>
                 <p class="mt-3 text-base leading-6 text-gray-500">
-                  {{ item.description }}
+                  {{ item.excerpt }}
                 </p>
               </nuxt-link>
             </div>

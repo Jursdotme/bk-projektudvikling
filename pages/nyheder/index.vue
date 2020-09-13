@@ -42,7 +42,7 @@
                   {{ post.title }}
                 </h3>
                 <p class="mt-3 text-base leading-6 text-gray-500">
-                  {{ post.description }}
+                  {{ post.excerpt }}
                 </p>
               </nuxt-link>
             </div>
