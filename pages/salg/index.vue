@@ -19,27 +19,48 @@
           labore natus atque, ducimus sed.
         </p>
       </div>
-      <div
-        class="grid max-w-lg gap-8 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"
-      >
+      <div class="grid grid-cols-1 gap-8 mt-12">
         <div
           v-for="item in loadedItems"
           :key="item.slug"
-          class="flex flex-col overflow-hidden transition-shadow duration-200 rounded-lg shadow-lg hover:shadow-xl"
+          class="relative bg-brand-400"
         >
-          <nuxt-link :to="itemLink(item)" class="flex-shrink-0">
-            <img :src="item.thumbnail" class="object-cover w-full" alt="" />
-          </nuxt-link>
-          <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-            <div class="flex-1">
-              <nuxt-link :to="itemLink(item)" class="block">
-                <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
-                  {{ item.title }}
-                </h3>
-                <p class="mt-3 text-base leading-6 text-gray-500">
-                  {{ item.excerpt }}
-                </p>
-              </nuxt-link>
+          <div
+            class="h-56 bg-brand-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2"
+          >
+            <img
+              class="object-cover w-full h-full"
+              :src="item.gallery"
+              alt="Support team"
+            />
+          </div>
+          <div
+            class="relative max-w-screen-xl px-4 py-12 mx-auto sm:px-6 lg:px-8 lg:py-16"
+          >
+            <div class="md:ml-auto md:w-1/2 md:pl-10">
+              <div
+                class="text-base font-semibold leading-6 tracking-wider text-gray-300 uppercase"
+              >
+                Nyhed
+              </div>
+              <h2
+                class="mt-2 text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl sm:leading-10"
+              >
+                {{ item.title }}
+              </h2>
+              <p class="mt-3 text-lg leading-7 text-gray-300">
+                {{ item.excerpt }}
+              </p>
+              <div class="mt-8">
+                <div class="inline-flex rounded-md shadow">
+                  <nuxt-link
+                    :to="itemLink(item)"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium leading-6 text-gray-900 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-gray-600 focus:outline-none focus:shadow-outline"
+                  >
+                    Læs mere
+                  </nuxt-link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
