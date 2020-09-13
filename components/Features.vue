@@ -3,7 +3,7 @@
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <p
-          class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+          class="text-base leading-6 text-brand-600 font-semibold tracking-wide uppercase"
         >
           Transactions
         </p>
@@ -24,7 +24,7 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white"
                 >
                   <svg
                     class="h-6 w-6"
@@ -57,7 +57,7 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white"
                 >
                   <svg
                     class="h-6 w-6"
@@ -90,7 +90,7 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white"
                 >
                   <svg
                     class="h-6 w-6"
@@ -123,7 +123,7 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white"
                 >
                   <svg
                     class="h-6 w-6"

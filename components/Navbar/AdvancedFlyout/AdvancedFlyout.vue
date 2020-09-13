@@ -40,7 +40,7 @@
               >
                 <div
                   v-if="subItem.icon"
-                  class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12"
+                  class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-brand-500 rounded-md sm:h-12 sm:w-12"
                   v-html="subItem.icon"
                 ></div>
                 <div class="space-y-1">
@@ -69,7 +69,7 @@
                   </div>
                   <span
                     v-if="subItem.pill"
-                    class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800"
+                    class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-brand-100 text-brand-800"
                   >
                     {{ subItem.pill }}
                   </span>

@@ -9,7 +9,24 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#eff5fc',
+          100: '#c7daef',
+          200: '#9fbee2',
+          300: '#77a3d4',
+          400: '#4f87c7',
+          500: '#276cba',
+          600: '#1f5796',
+          700: '#184271',
+          800: '#102c4d',
+          900: '#081728',
+        },
+      },
+    },
+  },
   variants: {},
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
   purge: {

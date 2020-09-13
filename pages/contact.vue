@@ -2,7 +2,7 @@
   <div>
     <div class="relative bg-gray-800">
       <div
-        class="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2"
+        class="h-56 bg-brand-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2"
       >
         <img
           class="object-cover w-full h-full"

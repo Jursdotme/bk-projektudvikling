@@ -30,7 +30,7 @@
           </nuxt-link>
           <div class="flex flex-col justify-between flex-1 p-6 bg-white">
             <div class="flex-1">
-              <p class="text-sm font-medium leading-5 text-indigo-600">
+              <p class="text-sm font-medium leading-5 text-brand-600">
                 <nuxt-link :to="postLink(post)" class="hover:underline"
                   >Blog</nuxt-link
                 >

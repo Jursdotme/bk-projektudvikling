@@ -2,7 +2,7 @@
   <div class="bg-gray-50">
     <div class="py-12 lg:text-center">
       <h1
-        class="text-base font-semibold leading-6 tracking-wide text-indigo-600 uppercase"
+        class="text-base font-semibold leading-6 tracking-wide text-brand-600 uppercase"
       >
         Employees
       </h1>

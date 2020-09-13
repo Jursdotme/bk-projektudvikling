@@ -4,7 +4,7 @@
     class="flex items-start p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
   >
     <div
-      class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12"
+      class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-brand-500 rounded-md sm:h-12 sm:w-12"
       v-html="icon"
     ></div>
     <div class="space-y-1">

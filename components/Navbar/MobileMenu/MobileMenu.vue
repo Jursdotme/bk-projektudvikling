@@ -45,7 +45,7 @@
                 class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
               >
                 <div
-                  class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md"
+                  class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-brand-500 rounded-md"
                   v-html="item.icon"
                 ></div>
                 <div class="text-base font-medium leading-6 text-gray-900">
@@ -70,7 +70,7 @@
             <span class="flex w-full rounded-md shadow-sm">
               <a
                 href="#"
-                class="flex items-center justify-center w-full px-4 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700"
+                class="flex items-center justify-center w-full px-4 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-brand-600 border border-transparent rounded-md hover:bg-brand-500 focus:outline-none focus:border-brand-700 focus:shadow-outline-brand active:bg-brand-700"
               >
                 Sign up
               </a>
@@ -81,7 +81,7 @@
               Existing customer?
               <a
                 href="#"
-                class="text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500"
+                class="text-brand-600 transition duration-150 ease-in-out hover:text-brand-500"
               >
                 Sign in
               </a>
