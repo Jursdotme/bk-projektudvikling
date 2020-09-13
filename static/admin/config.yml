@@ -23,7 +23,7 @@ collections:
   - name: 'salesitems'
     label: 'Salgs emner'
     format: 'json'
-    folder: 'assets/content/salesitems'
+    folder: 'assets/content/sales'
     create: true
     slug: '{{name}}'
     editor:
@@ -32,7 +32,7 @@ collections:
       - { label: 'Name',name: 'title',widget: 'string'}
       - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
       - { label: 'Specifikationer',name: 'specs',widget: 'markdown'}
-      - { label: "Feremhævet billede",name: "thumbnail",widget: "image",required: false, allow_multiple: true}
+      - { label: "Billeder", name: "gallery",widget: "image",required: false, allow_multiple: true}
 
   
   - name: 'settings'

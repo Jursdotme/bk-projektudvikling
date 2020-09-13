@@ -73,7 +73,7 @@ export default {
   },
   methods: {
     postLink(post) {
-      return 'blog/' + post.slug
+      return 'nyheder/' + post.slug
     },
   },
 }
