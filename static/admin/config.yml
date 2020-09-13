@@ -17,6 +17,7 @@ collections:
     fields:
       - { label: 'Titel',name: 'title',widget: 'string'}
       - { label: "Fremhævet billede",name: "thumbnail",widget: "image",required: false}
+      - {label: "Description", name: "description", widget: "text"}
       - { label: 'Dato',name: 'date',widget: 'datetime'}
       - { label: 'Indhold',name: 'body',widget: 'markdown'} 
 
@@ -32,6 +33,7 @@ collections:
       - { label: 'Name',name: 'title',widget: 'string'}
       - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
       - { label: 'Specifikationer',name: 'specs',widget: 'markdown'}
+      - {label: "Description", name: "description", widget: "text"}
       - { label: "Billeder", name: "gallery",widget: "image",required: false, allow_multiple: true}
 
   
