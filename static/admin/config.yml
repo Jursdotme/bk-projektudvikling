@@ -15,7 +15,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Titel',name: 'title',widget: 'string'}
+      - { label: 'Overskrift',name: 'title',widget: 'string'}
       - { label: "Fremhævet billede",name: "thumbnail",widget: "image",required: false}
       - { label: "Kort beskrivelse", name: "excerpt", widget: "text"}
       - { label: 'Dato',name: 'date',widget: 'datetime'}
@@ -30,7 +30,7 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Name',name: 'title',widget: 'string'}
+      - { label: 'Overskrift',name: 'title',widget: 'string'}
       - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
       - { label: 'Specifikationer',name: 'specs',widget: 'markdown'}
       - { label: "Kort beskrivelse", name: "excerpt", widget: "text"}
