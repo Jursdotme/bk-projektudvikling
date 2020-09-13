@@ -75,8 +75,8 @@ export default {
       menuItems: [
         { label: 'Salg', target: '/salg', type: 'normal' },
         { label: 'Leje', target: '/leje', type: 'normal' },
-        { label: 'Projekter', target: '/projekter ', type: 'normal' },
-        { label: 'Nyheder', target: '/nyheder ', type: 'normal' },
+        { label: 'Projekter', target: '/projekter', type: 'normal' },
+        { label: 'Nyheder', target: '/nyheder', type: 'normal' },
         { label: 'Kontakt', target: '/kontakt', type: 'normal' },
       ],
     }

@@ -19,18 +19,20 @@
           labore natus atque, ducimus sed.
         </p>
       </div>
-      <div class="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+      <div
+        class="grid max-w-lg gap-8 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"
+      >
         <div
           v-for="post in loadedPosts"
           :key="post.slug"
-          class="flex flex-col mt-12 overflow-hidden rounded-lg shadow-lg"
+          class="flex flex-col overflow-hidden transition-shadow duration-200 rounded-lg shadow-lg hover:shadow-xl"
         >
           <nuxt-link :to="postLink(post)" class="flex-shrink-0">
             <img :src="post.thumbnail" class="object-cover w-full" alt="" />
           </nuxt-link>
           <div class="flex flex-col justify-between flex-1 p-6 bg-white">
             <div class="flex-1">
-              <p class="text-sm font-medium leading-5 text-brand-600">
+              <p class="text-sm font-medium leading-5 text-indigo-600">
                 <nuxt-link :to="postLink(post)" class="hover:underline"
                   >Blog</nuxt-link
                 >
@@ -39,9 +41,17 @@
                 <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
                   {{ post.title }}
                 </h3>
-                <p class="mt-3 text-base leading-6 text-gray-500">excerpt</p>
+                <p class="mt-3 text-base leading-6 text-gray-500">
+                  {{ post.description }}
+                </p>
               </nuxt-link>
             </div>
+
+            <PostMeta
+              :author-data="post.author"
+              :date="post.date"
+              class="mt-6"
+            />
           </div>
         </div>
       </div>
@@ -51,7 +61,6 @@
 
 <script>
 export default {
-  name: 'BlogLoop',
   data() {
     return {
       postCount: 10,

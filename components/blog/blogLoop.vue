@@ -10,22 +10,21 @@
         <h2
           class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
         >
-          From the blog
+          Seneste nyt
         </h2>
         <p
           class="max-w-2xl mx-auto mt-3 text-xl leading-7 text-gray-500 sm:mt-4"
         >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
-          labore natus atque, ducimus sed.
+          Her kan du læse de seneste nyheder og tiltag fra BK Projektudvikling.
         </p>
       </div>
       <div
-        class="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"
+        class="grid max-w-lg gap-8 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none"
       >
         <div
           v-for="post in loadedPosts"
           :key="post.slug"
-          class="flex flex-col overflow-hidden rounded-lg shadow-lg"
+          class="flex flex-col overflow-hidden transition-shadow duration-200 rounded-lg shadow-lg hover:shadow-xl"
         >
           <nuxt-link :to="postLink(post)" class="flex-shrink-0">
             <img
@@ -36,12 +35,21 @@
           </nuxt-link>
           <div class="flex flex-col justify-between flex-1 p-6 bg-white">
             <div class="flex-1">
+              <p class="text-sm font-medium leading-5 text-brand-600">
+                <nuxt-link :to="postLink(post)" class="hover:underline">{{
+                  post.category
+                }}</nuxt-link>
+              </p>
               <nuxt-link :to="postLink(post)" class="block">
                 <h3 class="mt-2 text-xl font-semibold leading-7 text-gray-900">
                   {{ post.title }}
                 </h3>
+                <p class="mt-3 text-base leading-6 text-gray-500">
+                  {{ post.description }}
+                </p>
               </nuxt-link>
             </div>
+            <PostMeta :date="post.date" class="mt-6" />
           </div>
         </div>
       </div>
@@ -52,13 +60,17 @@
 <script>
 export default {
   name: 'BlogLoop',
-  data() {
-    return {
-      postCount: 3,
-    }
+  props: {
+    postCount: {
+      type: Number,
+      default: 3,
+    },
   },
   computed: {
     loadedPosts() {
+      if (this.postCount <= 0) {
+        return this.$store.state.blogPosts
+      }
       return this.$store.state.blogPosts.slice(0, this.postCount)
     },
   },

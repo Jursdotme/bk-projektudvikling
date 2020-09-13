@@ -45,7 +45,7 @@
                 class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
               >
                 <div
-                  class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-brand-500 rounded-md"
+                  class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white rounded-md bg-brand-500"
                   v-html="item.icon"
                 ></div>
                 <div class="text-base font-medium leading-6 text-gray-900">
@@ -70,7 +70,7 @@
             <span class="flex w-full rounded-md shadow-sm">
               <a
                 href="#"
-                class="flex items-center justify-center w-full px-4 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-brand-600 border border-transparent rounded-md hover:bg-brand-500 focus:outline-none focus:border-brand-700 focus:shadow-outline-brand active:bg-brand-700"
+                class="flex items-center justify-center w-full px-4 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out border border-transparent rounded-md bg-brand-600 hover:bg-brand-500 focus:outline-none focus:border-brand-700 focus:shadow-outline-brand active:bg-brand-700"
               >
                 Sign up
               </a>
@@ -81,7 +81,7 @@
               Existing customer?
               <a
                 href="#"
-                class="text-brand-600 transition duration-150 ease-in-out hover:text-brand-500"
+                class="transition duration-150 ease-in-out text-brand-600 hover:text-brand-500"
               >
                 Sign in
               </a>
@@ -103,49 +103,7 @@ export default {
     return {
       isOpen: false,
       mobileMenuItems: [
-        {
-          label: 'Analytics',
-          target: '/',
-          type: 'primary',
-          icon:
-            '<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>',
-        },
-        {
-          label: 'Engagement',
-          target: '/',
-          type: 'primary',
-          icon:
-            '<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>',
-        },
-        {
-          label: 'Security',
-          target: '/',
-          type: 'primary',
-          icon:
-            '<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>',
-        },
-        {
-          label: 'Integrations',
-          target: '/',
-          type: 'primary',
-          icon:
-            '<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>',
-        },
-        {
-          label: 'Automations',
-          target: '/',
-          type: 'primary',
-          icon:
-            '<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>',
-        },
-        {
-          label: 'Reports',
-          target: '/',
-          type: 'primary',
-          icon:
-            '<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>',
-        },
-        { label: 'Pricing', target: '/', type: 'secondary' },
+        { label: 'Nyheder', target: '/', type: 'secondary' },
         { label: 'Docs', target: '/', type: 'secondary' },
         { label: 'Enterprise', target: '/', type: 'secondary' },
         { label: 'Blog', target: '/', type: 'secondary' },
