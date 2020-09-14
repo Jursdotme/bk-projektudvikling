@@ -34,7 +34,11 @@ collections:
       - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
       - { label: 'Specifikationer',name: 'specs',widget: 'markdown'}
       - { label: "Kort beskrivelse", name: "excerpt", widget: "text"}
-      - { label: "Billeder", name: "gallery",widget: "image",required: false, allow_multiple: true}
+      - label: "Galleri"
+        name: "galleryImages"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: "Billede", name: image, widget: image}
 
   
   - name: 'settings'
