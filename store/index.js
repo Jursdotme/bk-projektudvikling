@@ -48,7 +48,7 @@ export const actions = {
       /\.json$/
     )
 
-    await const SalesItems = SalesItemFiles.keys()
+    const SalesItems = SalesItemFiles.keys()
       .map((key) => {
         const res = SalesItemFiles(key)
         res.slug = key.slice(2, -5)
