@@ -3,11 +3,12 @@ backend:
   branch: master
 media_library:
   name: cloudinary
-  output_filename_only: true
   config:
     cloud_name: jursdotme
     api_key: 153893748927374
     multiple: true
+    max_files: 25
+    output_filename_only: true
     
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
@@ -56,18 +57,12 @@ collections:
         widget: "image"
         required: false
         allow_multiple: false
-        media_library:
-          name: cloudinary
-          output_filename_only: true
       - label: "Galleri"
         name: "gallery"
         widget: "image"
         required: false
         allow_multiple: true
-        media_library:
-          name: cloudinary
-          output_filename_only: true
-
+       
 
   
   - name: 'settings'
