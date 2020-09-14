@@ -16,18 +16,84 @@
               v-html="$md.render(item.description)"
             ></div>
 
-            <div
-              class="max-w-md p-8 mx-auto mt-3 prose rounded shadow bg-brand-50 md:mt-5 md:max-w-3xl"
-            >
-              <h2>Specifikationer</h2>
-              <div v-html="$md.render(item.specs)"></div>
+            <div class="mt-8 overflow-hidden">
+              <dl class="grid grid-cols-3 gap-16">
+                <div class="flex flex-col">
+                  <dt
+                    class="order-2 text-base font-medium leading-6 text-gray-500"
+                  >
+                    Boligareal
+                  </dt>
+                  <dd
+                    class="order-1 text-2xl font-extrabold leading-8 text-brand-400 sm:text-3xl sm:leading-9"
+                  >
+                    {{ item.specs.area }}
+                  </dd>
+                </div>
+                <div class="flex flex-col">
+                  <dt
+                    class="order-2 text-base font-medium leading-6 text-gray-500"
+                  >
+                    Vægtet areal
+                  </dt>
+                  <dd
+                    class="order-1 text-2xl font-extrabold leading-8 text-brand-400 sm:text-3xl sm:leading-9"
+                  >
+                    {{ item.specs.actualarea }}
+                  </dd>
+                </div>
+                <div class="flex flex-col">
+                  <dt
+                    class="order-2 text-base font-medium leading-6 text-gray-500"
+                  >
+                    Rum/værelser
+                  </dt>
+                  <dd
+                    class="order-1 text-2xl font-extrabold leading-8 text-brand-400 sm:text-3xl sm:leading-9"
+                  >
+                    {{ item.specs.rooms }}
+                  </dd>
+                </div>
+                <div class="flex flex-col">
+                  <dt
+                    class="order-2 text-base font-medium leading-6 text-gray-500"
+                  >
+                    Plan
+                  </dt>
+                  <dd
+                    class="order-1 text-2xl font-extrabold leading-8 text-brand-400 sm:text-3xl sm:leading-9"
+                  >
+                    {{ item.specs.floors }}
+                  </dd>
+                </div>
+                <div class="flex flex-col">
+                  <dt
+                    class="order-2 text-base font-medium leading-6 text-gray-500"
+                  >
+                    Byggeår
+                  </dt>
+                  <dd
+                    class="order-1 text-2xl font-extrabold leading-8 text-brand-400 sm:text-3xl sm:leading-9"
+                  >
+                    {{ item.specs.constructionyear }}
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="mt-16 prose">
+              <h2>Andet</h2>
+
+              <p>
+                {{ item.specs.other }}
+              </p>
             </div>
           </div>
         </div>
         <div
           class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
         >
-          <Gallery :gallery="gallery" />
+          <Gallery :gallery="item.gallery" />
         </div>
       </main>
     </div>
@@ -44,13 +110,6 @@ export default {
   },
   data() {
     return {
-      gallery: [
-        'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1273&q=80',
-        'https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80',
-        'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        'https://images.unsplash.com/photo-1564320382348-c06ae02a3897?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
-        'https://images.unsplash.com/photo-1534353641488-754bfb2d6cd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-      ],
       index: null,
     }
   },
