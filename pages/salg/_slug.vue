@@ -2,7 +2,9 @@
   <div>
     <div class="relative bg-gray-50">
       <main class="lg:relative">
-        <div class="grid grid-cols-2 gap-16 py-16 mx-auto max-w-7xl">
+        <div
+          class="grid grid-cols-2 gap-16 px-4 py-16 mx-auto max-w-7xl sm:px-6"
+        >
           <div>
             <h1
               class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
@@ -16,7 +18,7 @@
 
             <div class="mt-8 overflow-hidden">
               <dl class="grid grid-cols-3 gap-16">
-                <div class="flex flex-col">
+                <div v-if="item.specs.area" class="flex flex-col">
                   <dt
                     class="order-2 text-base font-medium leading-6 text-gray-500"
                   >
@@ -28,7 +30,7 @@
                     {{ item.specs.area }}
                   </dd>
                 </div>
-                <div class="flex flex-col">
+                <div v-if="item.specs.actualarea" class="flex flex-col">
                   <dt
                     class="order-2 text-base font-medium leading-6 text-gray-500"
                   >
@@ -40,7 +42,7 @@
                     {{ item.specs.actualarea }}
                   </dd>
                 </div>
-                <div class="flex flex-col">
+                <div v-if="item.specs.rooms" class="flex flex-col">
                   <dt
                     class="order-2 text-base font-medium leading-6 text-gray-500"
                   >
@@ -52,7 +54,7 @@
                     {{ item.specs.rooms }}
                   </dd>
                 </div>
-                <div class="flex flex-col">
+                <div v-if="item.specs.floors" class="flex flex-col">
                   <dt
                     class="order-2 text-base font-medium leading-6 text-gray-500"
                   >
@@ -64,7 +66,7 @@
                     {{ item.specs.floors }}
                   </dd>
                 </div>
-                <div class="flex flex-col">
+                <div v-if="item.specs.constructionyear" class="flex flex-col">
                   <dt
                     class="order-2 text-base font-medium leading-6 text-gray-500"
                   >
@@ -79,7 +81,7 @@
               </dl>
             </div>
 
-            <div class="mt-16 prose">
+            <div v-if="item.specs.other" class="mt-16 prose">
               <h2>Andet</h2>
 
               <p>
