@@ -39,6 +39,7 @@ collections:
       preview: false
     fields:
       - { label: 'Overskrift',name: 'title',widget: 'string'}
+      - { label: 'Dato',name: 'date',widget: 'datetime'}
       - { label: "Kort beskrivelse", name: "excerpt", widget: "text"}
       - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
       - label: "Specifikationer"
