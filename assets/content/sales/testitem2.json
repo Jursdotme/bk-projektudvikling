@@ -9,6 +9,7 @@
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101066/MO_8020000165_204_mfkrff.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101065/03_Vrenstedvej_12b_vvtn7k.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101065/MO_8020000165_18_mez83i.jpg",
+    "https://res.cloudinary.com/jursdotme/image/upload/v1600101064/13_Vrenstedvej_12b_j7fmyh.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101064/MO_8020000165_202_yu4vti.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101063/MO_8020000165_21_fff8jr.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101054/MO_8020000165_223_zmsw7t.jpg",
@@ -16,7 +17,6 @@
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101052/MO_8020000165_2_fxi7hr.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101048/MO_8020000165_236_xou6po.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101045/MO_8020000165_233_pfqsrk.jpg",
-    "https://res.cloudinary.com/jursdotme/image/upload/v1600101043/MO_8020000165_218_l3evwt.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101042/MO_8020000165_216_cucdlp.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101042/MO_8020000165_224_cmumtw.jpg",
     "https://res.cloudinary.com/jursdotme/image/upload/v1600101041/MO_8020000165_232_gb6bbx.jpg",
@@ -31,5 +31,8 @@
     "floors": "2",
     "constructionyear": "1868/2019",
     "other": "Dette er ekstra tekst"
-  }
+  },
+  "featured_image": [
+    "https://res.cloudinary.com/jursdotme/image/upload/v1600101043/MO_8020000165_218_l3evwt.jpg"
+  ]
 }
