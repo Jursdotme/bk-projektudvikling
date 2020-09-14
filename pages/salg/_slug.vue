@@ -17,7 +17,7 @@
             ></div>
 
             <div
-              class="max-w-md p-8 mx-auto mt-3 prose bg-brand-50 md:mt-5 md:max-w-3xl"
+              class="max-w-md p-8 mx-auto mt-3 prose rounded shadow bg-brand-50 md:mt-5 md:max-w-3xl"
             >
               <h2>Specifikationer</h2>
               <div v-html="$md.render(item.specs)"></div>
