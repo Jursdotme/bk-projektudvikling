@@ -48,7 +48,7 @@ export const actions = {
       /\.json$/
     )
 
-    const SalesItems = SalesItemFiles.keys()
+    await const SalesItems = SalesItemFiles.keys()
       .map((key) => {
         const res = SalesItemFiles(key)
         res.slug = key.slice(2, -5)
@@ -59,7 +59,7 @@ export const actions = {
         return new Date(b.date) - new Date(a.date)
       })
 
-    SalesItems.forEach(function (item) {
+    await SalesItems.forEach(function (item) {
       const allImages = [...item.featured_image, ...item.gallery]
       const imageIds = []
       const removedUrl = 'https://res.cloudinary.com/jursdotme/image/upload/'
