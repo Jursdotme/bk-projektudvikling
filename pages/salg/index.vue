@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     itemLink(item) {
-      return 'salg/' + item.slug
+      return '/salg/' + item.slug
     },
     itemImage(item) {
       return `https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_1440,g_face/${item.featured_image}.jpg`
