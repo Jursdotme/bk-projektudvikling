@@ -31,9 +31,19 @@ collections:
       preview: false
     fields:
       - { label: 'Overskrift',name: 'title',widget: 'string'}
-      - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
-      - { label: 'Specifikationer',name: 'specs',widget: 'markdown'}
       - { label: "Kort beskrivelse", name: "excerpt", widget: "text"}
+      - { label: 'Beskrivelse',name: 'description',widget: 'markdown'}
+      - label: "Specifikationer"
+        name: "specs"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - {label: "Boligareal", name: "area", widget: "string"}
+          - {label: "Vægtet areal", name: "actualarea", widget: "string"}
+          - {label: "Rum/værelser", name: "rooms", widget: "string"}
+          - {label: "Antal plan", name: "floors", widget: "string"}
+          - {label: "Byggeår", name: "constructionyear", widget: "string"}
+          - {label: "Andet", name: "other", widget: "string"}
       - label: "Galleri"
         name: "galleryImages"
         widget: "list"
