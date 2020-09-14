@@ -45,6 +45,7 @@ export default {
   plugins: [
     '~plugins/date-filter.js',
     { src: '@/plugins/vClickOutside', ssr: false },
+    '~plugins/lightGallery.client.js',
   ],
   /*
    ** Auto import components

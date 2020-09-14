@@ -15,21 +15,19 @@
               class="max-w-md mx-auto mt-3 prose text-gray-500 md:mt-5 md:max-w-3xl"
               v-html="$md.render(item.description)"
             ></div>
+
+            <div
+              class="max-w-md p-8 mx-auto mt-3 prose bg-brand-50 md:mt-5 md:max-w-3xl"
+            >
+              <h2>Specifikationer</h2>
+              <div v-html="$md.render(item.specs)"></div>
+            </div>
           </div>
         </div>
         <div
           class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
         >
-          <img class="object-cover w-full" :src="item.gallery" />
-          <div class="grid grid-cols-5 gap-1 mt-1">
-            <img
-              v-for="(photo, index) in gallery"
-              :key="index"
-              class="object-cover w-full h-32"
-              :src="photo"
-              alt=""
-            />
-          </div>
+          <Gallery :gallery="gallery" />
         </div>
       </main>
     </div>
@@ -53,7 +51,17 @@ export default {
         'https://images.unsplash.com/photo-1564320382348-c06ae02a3897?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
         'https://images.unsplash.com/photo-1534353641488-754bfb2d6cd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       ],
+      index: null,
     }
+  },
+  methods: {
+    imageClass(index) {
+      if (index > 0) {
+        return 'object-cover w-full h-32'
+      } else {
+        return 'object-cover w-full col-span-5'
+      }
+    },
   },
 }
 </script>
