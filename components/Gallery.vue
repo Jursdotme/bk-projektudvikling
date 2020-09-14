@@ -51,13 +51,13 @@ export default {
     imageSrc(index, photo) {
       if (index > 0) {
         return (
-          'https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_500,g_face/' +
+          'https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_280,g_face/' +
           photo +
           '.jpg'
         )
       } else {
         return (
-          'https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_1440,g_face/' +
+          'https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_1200,g_face/' +
           photo +
           '.jpg'
         )
