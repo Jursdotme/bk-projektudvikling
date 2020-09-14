@@ -42,7 +42,7 @@ collections:
       - label: "Specifikationer"
         name: "specs"
         widget: "object"
-        collapsed: true
+        collapsed: false
         fields: 
           - {label: "Boligareal", name: "area", widget: "string"}
           - {label: "Vægtet areal", name: "actualarea", widget: "string"}
