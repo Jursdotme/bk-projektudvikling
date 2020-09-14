@@ -49,11 +49,8 @@ collections:
           - {label: "Antal plan", name: "floors", widget: "string"}
           - {label: "Byggeår", name: "constructionyear", widget: "string"}
           - {label: "Andet", name: "other", widget: "string"}
-      - label: "Galleri"
-        name: "galleryImages"
-        widget: "list"
-        summary: '{{fields.image}}'
-        field: {label: "Billede", name: image, widget: image}
+      - { label: "Galleri", name: "gallery",widget: "image",required: false, allow_multiple: true}
+
 
   
   - name: 'settings'
