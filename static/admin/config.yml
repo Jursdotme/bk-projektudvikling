@@ -6,6 +6,7 @@ media_library:
   config:
     cloud_name: jursdotme
     api_key: 153893748927374
+    multiple: true
     
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
