@@ -63,7 +63,19 @@ collections:
         widget: "image"
         required: false
         allow_multiple: true
-       
+  - name: 'projekter'
+    label: 'Projekter'
+    format: 'json'
+    folder: 'assets/content/projekter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Overskrift',name: 'title',widget: 'string'}
+      - { label: "Fremhævet billede",name: "thumbnail",widget: "image",required: false}
+      - { label: "Kort beskrivelse", name: "excerpt", widget: "text"}
+      - { label: 'Dato',name: 'date',widget: 'datetime'}
 
   
   - name: 'settings'
