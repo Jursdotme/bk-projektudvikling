@@ -59,6 +59,22 @@ export const actions = {
         return new Date(b.date) - new Date(a.date)
       })
 
+    SalesItems.forEach(function (item) {
+      const allImages = [...item.featured_image, ...item.gallery]
+      const imageIds = []
+      const removedUrl = 'https://res.cloudinary.com/jursdotme/image/upload/'
+      for (const image of allImages) {
+        let imageID = image.substring(removedUrl.length)
+        const filetypeStart = imageID.indexOf('.')
+        imageID = imageID.substring(filetypeStart, 0)
+        imageIds.push(imageID)
+      }
+
+      item.featured_image = imageIds[1]
+      imageIds.shift()
+      item.gallery = imageIds
+    })
+
     await commit('setSalesItems', SalesItems)
   },
 

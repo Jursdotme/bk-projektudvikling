@@ -2,10 +2,8 @@
   <div>
     <div class="relative bg-gray-50">
       <main class="lg:relative">
-        <div
-          class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-16 lg:text-left"
-        >
-          <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+        <div class="grid grid-cols-2 gap-16 py-16 mx-auto max-w-7xl">
+          <div>
             <h1
               class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
             >
@@ -89,11 +87,12 @@
               </p>
             </div>
           </div>
-        </div>
-        <div
-          class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
-        >
-          <Gallery :gallery="item.gallery" />
+          <div>
+            <Gallery
+              :gallery="item.gallery"
+              :featured-image="item.featured_image"
+            />
+          </div>
         </div>
       </main>
     </div>

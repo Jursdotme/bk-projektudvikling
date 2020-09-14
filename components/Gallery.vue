@@ -1,22 +1,22 @@
 <template>
-  <div class="grid grid-cols-5 gap-2">
+  <div class="grid grid-cols-4 gap-2">
     <template v-for="(photo, imageIndex) in gallery">
       <img
         :key="imageIndex"
         :class="imageClass(imageIndex)"
-        :src="photo"
+        :src="imageSrc(imageIndex, photo)"
         alt=""
         @click="index = imageIndex"
       />
     </template>
-    <no-ssr>
+    <client-only>
       <LightGallery
-        :images="gallery"
+        :images="lightboxSrc(featuredImage, gallery)"
         :index="index"
         :disable-scroll="true"
         @close="index = null"
       />
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
@@ -30,6 +30,10 @@ export default {
         return []
       },
     },
+    featuredImage: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
@@ -41,8 +45,34 @@ export default {
       if (index > 0) {
         return 'cursor-pointer hover:shadow-xl shadow transition duration-200 object-cover w-full h-32'
       } else {
-        return 'cursor-pointer hover:shadow-xl shadow transition duration-200 object-cover w-full col-span-5'
+        return 'cursor-pointer hover:shadow-xl shadow transition duration-200 object-cover w-full col-span-4'
       }
+    },
+    imageSrc(index, photo) {
+      if (index > 0) {
+        return (
+          'https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_500,g_face/' +
+          photo +
+          '.jpg'
+        )
+      } else {
+        return (
+          'https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_1440,g_face/' +
+          photo +
+          '.jpg'
+        )
+      }
+    },
+    lightboxSrc(featuredImage, gallery) {
+      const allImages = [featuredImage, ...gallery]
+      const allImageUrls = []
+
+      for (const image of allImages) {
+        allImageUrls.push(
+          `https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_1440,g_face/${image}.jpg`
+        )
+      }
+      return allImageUrls
     },
   },
 }
