@@ -34,7 +34,7 @@ collections:
     format: 'json'
     folder: 'assets/content/sales'
     create: true
-    slug: '{{name}}'
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
@@ -46,12 +46,12 @@ collections:
         widget: "object"
         collapsed: false
         fields: 
-          - {label: "Boligareal", name: "area", widget: "string"}
-          - {label: "Vægtet areal", name: "actualarea", widget: "string"}
-          - {label: "Rum/værelser", name: "rooms", widget: "string"}
-          - {label: "Antal plan", name: "floors", widget: "string"}
-          - {label: "Byggeår", name: "constructionyear", widget: "string"}
-          - {label: "Andet", name: "other", widget: "string"}
+          - {label: "Boligareal", name: "area", widget: "string", required: false}
+          - {label: "Vægtet areal", name: "actualarea", widget: "string", required: false}
+          - {label: "Rum/værelser", name: "rooms", widget: "string", required: false}
+          - {label: "Antal plan", name: "floors", widget: "string", required: false}
+          - {label: "Byggeår", name: "constructionyear", widget: "string", required: false}
+          - {label: "Andet", name: "other", widget: "string", required: false}
       - label: "Fremhævet billede"
         name: "featured_image"
         widget: "image"
