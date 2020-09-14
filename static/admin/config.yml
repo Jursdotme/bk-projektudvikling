@@ -9,6 +9,9 @@ media_library:
     api_key: 153893748927374
     multiple: true
     max_files: 25
+    
+media_folder: "static/images/uploads"
+public_folder: "https://res.cloudinary.com/jursdotme/image/upload/c_thumb,w_500,g_face/"
 
 collections:
   - name: 'blog'
