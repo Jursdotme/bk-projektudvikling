@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-5 gap-1 mt-1">
+  <div class="grid grid-cols-5 gap-2">
     <template v-for="(photo, imageIndex) in gallery">
       <img
         :key="imageIndex"
@@ -39,9 +39,9 @@ export default {
   methods: {
     imageClass(index) {
       if (index > 0) {
-        return 'object-cover w-full h-32'
+        return 'cursor-pointer hover:shadow-xl shadow transition duration-200 object-cover w-full h-32'
       } else {
-        return 'object-cover w-full col-span-5'
+        return 'cursor-pointer hover:shadow-xl shadow transition duration-200 object-cover w-full col-span-5'
       }
     },
   },
